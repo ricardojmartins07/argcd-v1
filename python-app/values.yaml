@@ -1,0 +1,14 @@
+replicaCount: 1
+image:
+  repository: python
+  tag: "3.8"
+command: ["python", "/mnt/data/app.py"]
+
+volumeMounts:
+  - mountPath: "/mnt/data"
+    name: python-storage
+
+volumes:
+  - name: python-storage
+    persistentVolumeClaim:
+      claimName: python-pvc
