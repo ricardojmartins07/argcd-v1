@@ -2,3 +2,6 @@ apiVersion: v2
 name: python-app
 description: A simple Python app
 version: 0.1.0
+test:
+  enabled: false
+
